@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcServer.Services";
+
+message SampleRequest{
+	int32 id = 1;
+	string conteudo = 2;
+}
+
+message SampleResponse{
+	int32 id = 1;
+	string conteudo = 2;
+}
+
+service MessageService{
+	rpc Ping(SampleRequest) returns (SampleResponse);
+}
